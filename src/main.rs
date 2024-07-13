@@ -30,6 +30,9 @@ fn main() {
     // SBSApplication calls do work
     println!("{:?}", application.is_running());
 
+    // Makes a raw call to playpause with the event codes
+    // 0x686F6F6B, 0x506C5073, 0
+    // works as expected
     application.sendEvent();
 
     // invalid message send to -[SBScriptableApplication playpause]: method not found
